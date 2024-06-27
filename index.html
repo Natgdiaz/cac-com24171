@@ -1,21 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intro a JS</title>
-    <script>
-        console.log("Hola Mundo");
-        console.log(39+1);
-        console.log("edad:" , 37+1);
-        console.log("Edad:" +37);
-        console.info("Mensajes de informacion");
-        console.warn("mensaje de advertencia");
-        console.error("Esto es un msj de error");
-    </script>
-</head>
-<body>
-    <h1>Este es el titulo</h1>
-    <h2>hola estoy probando</h2>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anime Nexus</title>
+    <link rel="shortcut icon" href="imagenes/Anime_Nexus.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="Javascript.js" defer></script>
+  </head>
+  <body>
+    <header class="encabezado">
+      <div class="banner">
+        <h1 class="titulo-pagina"><em>Anime Nexus</em></h1>
+        <img src="./imagenes/banner2.jpg" alt="Banner" />
+      </div>
+    </header>
+    <nav>
+      <button class="alternar-menu" onclick="alternarMenu()">☰</button>
+      <ul id="menu">
+        <li>
+          <a href="index.html">Página principal</a>
+        </li>
+        <li>
+          <a href="catalogo.html">Catálogo de personajes</a>
+        </li>
+        <li>
+          <a href="series.html">Series y música</a>
+        </li>
+        <li>
+          <a href="registro.html">Registro</a>
+        </li>
+        <li>
+          <a href="quienes.html">¿Quiénes somos?</a>
+        </li>
+      </ul>
+    </nav>
+    <div>
+      <h2>Página Principal</h2>
+      <div class="carrusel">
+        <div id="carrusel-interno" class="carrusel-interno">
+          <div class="carrusel-item activo">
+            <a
+              href="imagenes/tanjiro1.jpg"
+              target="_blank"
+              title="Ver mas grande"
+              ><img src="imagenes/tanjiro1.jpg" alt="Tanjiro"
+            /></a>
+          </div>
+          <div class="carrusel-item">
+            <a href="imagenes/goku1.jpg" target="_blank" title="Ver mas grande"
+              ><img src="imagenes/goku1.jpg" alt="Goku"
+            /></a>
+          </div>
+          <div class="carrusel-item">
+            <a
+              href="imagenes/naruto1.jpg"
+              target="_blank"
+              title="Ver mas grande"
+              ><img src="imagenes/naruto1.jpg" alt="Naruto"
+            /></a>
+          </div>
+        </div>
+        <div class="botones-carrusel">
+          <button id="prev" class="control-carrusel">❮</button>
+          <button id="sig" class="control-carrusel">❯</button>
+        </div>
+      </div>
+    </div>
+    <article class="articulo-bienvenida">
+      <div class="contenedor-texto">
+        <h3>Bienvenidos</h3>
+        <p>
+          ¡Ey, gente del mundo otaku! Bienvenidos a nuestro rinconcito digital,
+          donde la pasión por el anime se desborda como una ola gigante en la
+          playa de Okinawa. Aquí encontrarás un festín de palabras y emociones
+          dedicadas a ese universo colorido y lleno de aventuras que tanto nos
+          apasiona. ¿Eres un novato en el mundo del anime? ¡No hay problema!
+          Prepárate para un viaje alucinante a través de recomendaciones,
+          análisis y curiosidades que te ayudarán a sumergirte en este
+          fascinante universo nipón. ¿Eres un veterano de mil batallas otaku?
+          ¡Genial! Aquí encontrarás debates apasionantes, teorías descabelladas
+          y, por supuesto, ese toque de nostalgia que nos hace recordar con
+          cariño aquellos clásicos que marcaron nuestra infancia. Así que,
+          agarra tus palomitas, acomódate en tu silla gamer favorita y prepárate
+          para explorar un mundo donde los límites los pone tu imaginación.
+          ¡Bienvenidos a mi web sobre anime, donde la aventura nunca termina y
+          la diversión está garantizada!
+        </p>
+      </div>
+      <div class="contenedor-imagen">
+        <a
+          href="https://es.wikipedia.org/wiki/Anya_Forger"
+          target="_blank"
+          title="info sobre Anya"
+          ><img
+            src="imagenes/Anya.gif"
+            alt="Imagen de bienvenida"
+            class="imagen-bienvenida"
+        /></a>
+      </div>
+    </article>
+    <footer>
+      <div class="pie-contenido">
+          <div class="pie-iconos">
+              <a href="mailto:anime@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Correo electrónico"><i class="fas fa-envelope" title="Correo electrónico"></i></a>
+              <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter" title="Twitter"></i></a>
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" title="Instagram"></i></a>
+          </div>
+          <p>© 2024 Anime Nexus. Todos los derechos reservados.</p>
+      </div>
+  </footer>
 </body>
 </html>

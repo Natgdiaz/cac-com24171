@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anime Nexus</title>
+    <link rel="shortcut icon" href="imagenes/Anime_Nexus.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="Javascript.js" defer></script>
+</head>
+<body>
+    <header class="encabezado">
+        <div class="banner">
+            <h1 class="titulo-pagina"><i>Anime Nexus</i></h1>
+            <img src="./imagenes/banner2.jpg" alt="Banner" />
+        </div>
+    </header>
+    <nav>
+        <button class="alternar-menu" onclick="alternarMenu()">☰</button>
+        <ul id="menu">
+            <li><a href="index.html">Página principal</a></li>
+            <li><a href="catalogo.html">Catálogo de personajes</a></li>
+            <li><a href="series.html">Series y música</a></li>
+            <li><a href="registro.html">Registro</a></li>
+            <li><a href="quienes.html">¿Quiénes somos?</a></li>
+        </ul>
+    </nav>
+    <h2>Agregar personajes</h2>
+    <form method="post" enctype="multipart/form-data">
+        {{ form.hidden_tag() }} <!-- Token CSRF -->
+        <label for="usuario"><i class="fas fa-user"></i> Nombre de usuario:</label>
+        <input type="text" id="usuario" name="usuario" required="" />
+        <i id="username-icon" class="fas fa-user"></i>
+        <br>
+        <label for="descripcion"><i class="fas fa-pencil-alt"></i> Descripción:</label>
+        <textarea id="descripcion" name="descripcion"></textarea>
+        <br>
+        <label for="foto"><i class="fas fa-image"></i> Foto:</label>
+        <input type="file" id="foto-perfil" name="foto">
+        <br>
+        <img id="imagen-preview" src="#" alt="Vista previa de la imagen" style="display: none;">
+        <br>
+        <input type="submit" value="Agregar">
+
+    </form>
+
+    <footer>
+        <div class="pie-contenido">
+            <div class="pie-iconos">
+                <a href="mailto:anime@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Correo electrónico"><i class="fas fa-envelope" title="Correo electrónico"></i></a>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter" title="Twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" title="Instagram"></i></a>
+            </div>
+            <p>© 2024 Anime Nexus. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
