@@ -32,7 +32,7 @@
     <h1>Listado de Personajes</h1><br>
 
     <table> <!-- Se crea una tabla para mostrar los personajes. -->
-        <thead> <!--Encabezado de la tabla con columnas para nombre, descripción, imagen -->
+        <thead> 
             <tr>
                 <th>Nombre</th>
                 <th>Descripción</th>              
@@ -46,15 +46,9 @@
         <a href="index.html">Menu principal</a>
     </div>
     <script>
-        const URL = "http://127.0.0.1:5000/"
-        //const URL = "https://nattgd.pythonanywhere.com/"
+        const URL = "http://127.0.0.1:5000/"      
 
-
-        // Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
-        //const URL = "https://USUARIO.pythonanywhere.com/"
-        
-
-        // Realizamos la solicitud GET al servidor para obtener todos los productos.
+        // Realizamos la solicitud GET al servidor para obtener todos los personajes.
         fetch(URL + 'personajes')
             .then(function (response) {
                 if (response.ok) {
@@ -72,17 +66,13 @@
 
                 // Iteramos sobre cada personaje y agregamos filas a la tabla
                 for (let personaje of data) {
-                    let fila = document.createElement('tr'); //Crea una nueva fila de tabla (<tr>) para cada producto.
+                    let fila = document.createElement('tr'); //Crea una nueva fila de tabla (<tr>) para cada personaje.
                     fila.innerHTML = '<td>' + personaje.nombre + '</td>' +
                                      '<td>' + personaje.descripcion + '</td>' +
                                     // Mostrar miniatura de la imagen
                                      '<td><img src=./static/imagenes/' + personaje.imagen_url +' alt="Imagen del producto" style="width: 100px;"></td>';
-                        //'<td><img src=https://www.pythonanywhere.com/user/nattgd/files/home/nattgd/mysite/static/imagenes/' + producto.imagen_url +' alt="Imagen del producto" style="width: 100px;"></td>' + '<td align="right">' + producto.proveedor + '</td>';
-                        
-                        //Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
-                        //'<td><img src=https://www.pythonanywhere.com/user/USUARIO/files/home/USUARIO/mysite/static/imagenes/' + producto.imagen_url +' alt="Imagen del producto" style="width: 100px;"></td>' + '<td align="right">' + producto.proveedor + '</td>';
-                    
-                    //Una vez que se crea la fila con el contenido del producto, se agrega a la tabla utilizando el método appendChild del elemento tablaProductos.
+                  
+                    //Una vez que se crea la fila con el contenido del personaje, se agrega a la tabla utilizando el método appendChild del elemento tablaPersonajes.
                     tablaPersonajes.appendChild(fila);
                 }
             })
