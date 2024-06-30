@@ -106,40 +106,6 @@ catalogo = Catalogo(host='localhost', user='root', password='', database='nexus'
 # Carpeta para guardar las imagenes
 ruta_destino = './static/imagenes/'
 
-# # Llamar al método agregar_personaje correctamente
-# catalogo.agregar_personaje('Naruto', 'protagonista de Naruto', 'naruto.jpg')
-
-# # # # Consultamos un personaje y lo mostramos
-# id_personaje = input("Ingrese el ID del personaje: ")
-# try:
-#     id_personaje = int(id_personaje)
-#     personaje = catalogo.consultar_personaje(id_personaje)
-#     if personaje:
-#         print(f"personaje encontrado: {personaje['nombre']} - {personaje['descripcion']}")
-#     else:
-#         print(f'personaje con ID= {id_personaje} no encontrado.')
-# except ValueError:
-#     print("El ID debe ser un número entero válido.")
-    
-# # Listar productos
-# personajes = catalogo.listar_personajes()
-# for personaje in personajes:
-#     print(personaje)
- 
-# print("-" * 120)   
-    
-# # Eliminar un personaje
-# catalogo.eliminar_personaje(6)
-# personajes = catalogo.listar_personajes()
-# for personaje in personajes:
-#     print(personaje)
-    
-        
-
-# # Cerrar la conexión cuando ya no se necesite
-# catalogo.cerrar_conexion()
-
-
 # #probando Flask
 @app.route("/personajes", methods=["GET"])
 def listar_personajes():
