@@ -136,7 +136,7 @@ def agregar_personaje():
     nuevo_id = catalogo.agregar_personaje(nombre, descripcion, nombre_imagen)
     if nuevo_id:    
             imagen.save(os.path.join(ruta_destino, nombre_imagen))
-            return jsonify({"mensaje": "Producto agregado correctamente.", "codigo": nuevo_codigo, "imagen": nombre_imagen}), 201
+            return jsonify({"mensaje": "Producto agregado correctamente.", "codigo": nuevo_id, "imagen": nombre_imagen}), 201
     else:
             return jsonify({"mensaje": "Error al agregar el producto."}), 500    
 
